@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="../lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+
+ <!-- Font Awesome JS -->
+    <script defer src="../lib/solid.js"></script>
+    <script defer src="../lib/fontawesome.js"></script>
+
+</head>
+
+<body style="background-color: #F0F8FF;">
+  <div class="carregando" id="carregando"></div>
+    <div class="corpo" id="corpo">
+      <div class="wrapper">
+          <nav id="sidebar">
+              <div class="sidebar-header">
+                  <h3>Barra de Navegação</h3>
+              </div>
+
+              <ul class="list-unstyled components">
+                  <p>Menu de Opções                         
+                    <img src="../images/iconConfiguration2.png" style="width: 15%; float: rigth;">
+                  </p>
+                  <li class="active">
+                      <a href="#idosoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" style="font-family: Arial;">Idoso
+                      <img src="../images/iconOlder2.png" style="width: 15%; float: rigth;">
+                      </a>
+                      <ul class="collapse list-unstyled" id="idosoSubmenu">
+                          <li>
+                              <a href="cadastraIdoso.html">Área de Cadastro</a>
+                          </li>
+                          <li>
+                              <a href="listarIdosos.html">Lista de Idosos</a>
+                          </li>
+                          <li>
+                              <a href="vigiarIdoso.html">Vigiar Idoso</a>
+                          </li>
+                          <li>
+                              <a href="lazer.html">Área de Lazer</a>
+                          </li>
+                          <li>
+                              <a href="cardapio.html">Cardápio Alimentar</a>
+                          </li>
+                      </ul>
+                      <a href="#medicamentoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" style="font-family: Arial;">Medicamento
+                        <img src="../images/iconMedicamento.png" style="width: 15%; float: rigth;">
+                      </a>
+                      <ul class="collapse list-unstyled" id="medicamentoSubmenu">
+                          <li>
+                              <a href="cadastraMedicamento.html">Área de Cadastro</a>
+                          </li>
+                          <li>
+                              <a href="listarMedicamento.html">Lista de Medicamentos</a>
+                          </li>
+                      </ul>
+                      <a href="#casadeRepousoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" style="font-family: Arial;">Casa de Repouso
+                        <img src="../images/iconCasadeRepouso.png" style="width: 15%; float: rigth;">
+                      </a>
+                      <ul class="collapse list-unstyled" id="casadeRepousoSubmenu">
+                          <li>
+                              <a href="cadastraCasaDeRepouso.html">Área de Cadastro</a>
+                          </li>
+                          <li>
+                              <a href="listarCasadeRepouso.html">Lista de Casas de Repouso</a>
+                          </li>
+                      </ul>
+                      <a href="#receitaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" style="font-family: Arial;">Receita Médica
+                        <img src="../images/iconReceita.png" style="width: 12%; float: rigth;">
+                      </a>
+                      </a>
+                      <ul class="collapse list-unstyled" id="receitaSubmenu">
+                        <li>
+                          <a href="cadastraReceita.html">Nova Receita</a>
+                        </li>
+                        <li>
+                          <a href="listarReceita.html">Visualizar Receita</a>
+                        </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="notification.html">Notificações
+                      <img src="../images/iconNotification4.png" style="width: 12%; float: rigth;"><span class="notif red">4</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="configuration.html">Configurações
+                      <img src="../images/iconConfiguration.png" style="width: 15%; float: rigth;">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="about.html">Sobre o Aplicativo
+                      <img src="../images/iconAbout.png" style="width: 12%; float: rigth;">
+                    </a>
+                  </li>
+          </nav>
+        
+          <!-- Page Content  -->
+          <div id="content">
+
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <div class="container-fluid">
+                      <button type="button" id="sidebarCollapse" class="btn btn-info">
+                          <i class="fas fa-align-left"></i>
+                      </button>
+                          <img src="../images/iconNotification5.png" style="width: 18%; float: right; margin-right: 5px;" onclick="notification()">
+                  </div>
+              </nav>
+              <h5 style="text-align: center;">Seja Bem-vindo!</h5>
+              <center><img src="../images/login.jpg" style="width: 80%; border-radius: 8px; border: 1px inset black;"></center><br>
+
+              <label for="nomeC" id="nomeC" style="font-weight: bold;">Nome:</label> João Victor Pereira da Silva<br>
+              <label for="idadeC" id="idadeC" style="font-weight: bold;">Idade:</label>  17 anos<br>
+              <label for="rgC" id="rgC" style="font-weight: bold;">RG:</label>   59.564.263-79<br>
+              <label for="cnpjC" id="cnpjC" style="font-weight: bold;">CNPJ:</label>   745.975.142/4532-89<br>
+              <label for="telefoneC" id="telefoneC" style="font-weight: bold;">Telefone:</label>  (13) 98746-6478<br>
+              <label for="emailC" id="emailC" style="font-weight: bold;">Email:</label>  joaosilva@gmail.com<br>
+              <label for="tipoC" id="tipoC" style="font-weight: bold;">Tipo:</label>   Administrador<br><br>
+
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group">
+            <button class="btn btn-primary btn-block" id="editarUsuario">Editar</button>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-group">
+            <button class="btn btn-danger btn-block" id="excluirUsuario">Excluir</button>
+          </div>
+        </div>
+      </div>
+    </div>      
+  </div>
+
+    <script src="../lib/jquery-3.3.1.slim.min.js"></script>
+    <script src="../lib/popper.min.js"></script>
+    <script src="../lib/js/bootstrap.min.js"></script>
+    <script src="../components/banco.js"></script>
+    <script src="../components/controle.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+
+        function notification(){
+            $(location).attr("href","notification.html");
+        }
+
+    </script>
+  </div>
+</body>
+
+</html>
